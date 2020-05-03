@@ -1,8 +1,7 @@
 # Laravel Mailers
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/stenfrank/laravel-mailers.svg?style=flat-square)](https://packagist.org/packages/stenfrank/laravel-mailers)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/stenfrank/laravel-mailers/run-tests?label=tests)
-[![Quality Score](https://img.shields.io/scrutinizer/g/stenfrank/laravel-mailers.svg?style=flat-square)](https://scrutinizer-ci.com/g/stenfrank/laravel-mailers)
+[![Build Status](https://travis-ci.org/Stenfrank/laravel-mailers.svg?branch=master)](https://travis-ci.org/Stenfrank/laravel-mailers)
 [![Total Downloads](https://img.shields.io/packagist/dt/stenfrank/laravel-mailers.svg?style=flat-square)](https://packagist.org/packages/stenfrank/laravel-mailers)
 
 ## Documentation
