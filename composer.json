@@ -1,0 +1,48 @@
+{
+    "name": "stenfrank/laravel-mailers",
+    "description": "Dynamic configuration of mailers",
+    "keywords": [
+        "soenac",
+        "stenfrank",
+        "laravel-mailers"
+    ],
+    "homepage": "https://github.com/Stenfrank/laravel-mailers",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Frank Aguirre",
+            "email": "stenfrank@soenac.com",
+            "homepage": "https://soenac.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stenfrank\\LaravelMailers\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Stenfrank\\LaravelMailers\\Tests\\": "tests"
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.2",
+        "phpunit/phpunit": "^9.1"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "testf": "vendor/bin/phpunit --filter"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Stenfrank\\LaravelMailers\\LaravelMailersServiceProvider"
+            ]
+        }
+    }
+}
