@@ -32,6 +32,12 @@ class LaravelMailersServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/mails.php' => config_path('mails.php'),
+            ], 'config');
+        }
+
         $this->app->resolving(MailManager::class, function (MailManager $mailManager, $app) {
             $app->make('mailers');
 
