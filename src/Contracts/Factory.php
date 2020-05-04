@@ -3,9 +3,9 @@
 namespace Stenfrank\LaravelMailers\Contracts;
 
 interface Factory
-{    
+{
     /**
-     * Config
+     * Config.
      *
      * @return void
      */

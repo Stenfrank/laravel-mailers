@@ -13,30 +13,30 @@ class DynamicMailers extends AbstractDynamicMailers implements DynamicFactory
      * @var \Illuminate\Contracts\Foundation\Application
      */
     protected $app;
-    
+
     /**
-     * Mails
+     * Mails.
      *
      * @var array
      */
     protected $mails = [];
-    
+
     /**
-     * Configs
+     * Configs.
      *
      * @var array
      */
     protected $configs = [];
-    
+
     /**
-     * Mailers
+     * Mailers.
      *
      * @var array
      */
     protected $mailers = [];
-    
-     /**
-     * Construct
+
+    /**
+     * Construct.
      *
      * @param  \Illuminate\Contracts\Foundation\Application $app
      * @return void
@@ -47,7 +47,7 @@ class DynamicMailers extends AbstractDynamicMailers implements DynamicFactory
     }
 
     /**
-     * Config
+     * Config.
      *
      * @return void
      */
