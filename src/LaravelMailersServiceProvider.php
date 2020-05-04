@@ -6,17 +6,17 @@ use Illuminate\Mail\MailManager;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelMailersServiceProvider extends ServiceProvider
-{    
+{
     /**
-     * Register
+     * Register.
      *
      * @return void
      */
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/mails.php', 'mails');
-        
-        $this->app->singleton('dynamic.mailers', function($app) {
+
+        $this->app->singleton('dynamic.mailers', function ($app) {
             return new DynamicMailers($app);
         });
 
@@ -24,9 +24,9 @@ class LaravelMailersServiceProvider extends ServiceProvider
             return $app->make('dynamic.mailers')->config();
         });
     }
-    
+
     /**
-     * Boot
+     * Boot.
      *
      * @return void
      */

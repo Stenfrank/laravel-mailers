@@ -6,11 +6,12 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 
 /**
- * Abstract dynamic mailers
+ * Abstract dynamic mailers.
  */
-abstract class AbstractDynamicMailers {
+abstract class AbstractDynamicMailers
+{
     /**
-     * Set configs
+     * Set configs.
      *
      * @param  string $name
      * @param  int $key
@@ -24,19 +25,20 @@ abstract class AbstractDynamicMailers {
 
         return $this->mailer[$name];
     }
-    
+
     /**
-     * Set transports
+     * Set transports.
      *
      * @param  int $key
      * @return string
      */
-    protected function setTransports($key) {
+    protected function setTransports($key)
+    {
         return Arr::get($this->configs, "transports.{$key}", null);
     }
-    
+
     /**
-     * Set hosts
+     * Set hosts.
      *
      * @param  int $key
      * @return string
@@ -45,57 +47,62 @@ abstract class AbstractDynamicMailers {
     {
         return Arr::get($this->configs, "hosts.{$key}", null);
     }
-    
+
     /**
-     * Set ports
+     * Set ports.
      *
      * @param  int $key
      * @return int
      */
-    protected function setPorts($key) {
+    protected function setPorts($key)
+    {
         return (int) Arr::get($this->configs, "ports.{$key}", null);
     }
-    
+
     /**
-     * Set froms
+     * Set froms.
      *
      * @param  int $key
      * @return array
      */
-    protected function setFroms($key) {
+    protected function setFroms($key)
+    {
         return [
             'address' => Arr::get($this->configs, "froms.address.{$key}", null),
             'name' => Arr::get($this->configs, "froms.name.{$key}", null),
         ];
     }
-    
+
     /**
-     * Set encryptions
+     * Set encryptions.
      *
      * @param  int $key
      * @return string
      */
-    protected function setEncryptions($key) {
+    protected function setEncryptions($key)
+    {
         return (($encryption = Arr::get($this->configs, "encryptions.{$key}", null)) === 'null') ? null : $encryption;
     }
-    
+
     /**
-     * Set usernames
+     * Set usernames.
      *
      * @param  int $key
      * @return string
      */
-    protected function setUsernames($key) {
+    protected function setUsernames($key)
+    {
         return Arr::get($this->configs, "usernames.{$key}", null);
     }
-    
+
     /**
-     * Set passwords
+     * Set passwords.
      *
      * @param  int $key
      * @return string
      */
-    protected function setPasswords($key) {
+    protected function setPasswords($key)
+    {
         return Arr::get($this->configs, "passwords.{$key}", null);
     }
 }

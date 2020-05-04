@@ -2,13 +2,12 @@
 
 namespace Stenfrank\LaravelMailers\Tests;
 
+use Illuminate\Mail\Transport\LogTransport;
+use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 use Swift_SmtpTransport;
-use Psr\Log\LoggerInterface;
-use Monolog\Handler\StreamHandler;
-use Illuminate\Mail\Transport\LogTransport;
-use Stenfrank\LaravelMailers\Tests\TestCase;
 
 class MailLogTransportTest extends TestCase
 {
@@ -61,7 +60,6 @@ class MailLogTransportTest extends TestCase
         $transportSmtp = $this->app['mail.manager']->mailer('other')->getSwiftMailer()->getTransport();
 
         $this->assertInstanceOf(Swift_SmtpTransport::class, $transportSmtp);
-
     }
 
     public function testGetLogTransportWithPsrLogger()
@@ -89,6 +87,5 @@ class MailLogTransportTest extends TestCase
         $transportOther = $this->app['mail.manager']->mailer('other')->getSwiftMailer()->getTransport()->logger();
 
         $this->assertEquals($logger, $transportOther);
-
     }
 }

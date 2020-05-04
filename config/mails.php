@@ -64,7 +64,7 @@ return [
 
     'froms' => [
         'address' => explode('|', env('MAIL_FROM_ADDRESS', 'hello@example.com')),
-        'name' => explode('|',env('MAIL_FROM_NAME', 'Example')),
+        'name' => explode('|', env('MAIL_FROM_NAME', 'Example')),
     ],
 
     /*
